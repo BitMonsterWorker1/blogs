@@ -16,3 +16,42 @@
 
  @import "bootstrap-sprockets";
  // @import "bootstrap";
+
+li {
+  border-radius: 15px;
+  background-color: #66e0ff;
+  margin: 15px;
+  border: 2.5px solid #66e0ff;
+}
+
+li:hover {
+  border-radius: 15px;
+  background-color: #4dff4d;
+  margin: 15px;
+  border: 2.5px solid #4dff4d;
+  transition: 2s;
+}
+
+a {
+  direction: none;
+  border-radius: 10px;
+  background-color: #66e0ff;
+  margin: 15px;
+  margin-top: 10px;
+  border: 2.5px solid #66e0ff;
+}
+
+
+a:hover {
+    direction: none;
+  border-radius: 10px;
+  background-color: #4dff4d;
+  margin: 15px;
+  margin-top: 10px;
+  border: 2.5px solid #4dff4d;
+
+}
+
+input {
+  margin: 15px;
+}
