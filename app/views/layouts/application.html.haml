@@ -8,9 +8,16 @@
 %body
  %nav.navbar.navbar-default
   .container
-  .navbar-brand= link_to "Main", root_path
-  %ul.nav.navbar-nav.navbar-left
-   %li= link_to "New Post",  new_post_path
+   .navbar-brand= link_to "Main", root_path
+   %ul.nav.navbar-nav.navbar-right
+    %li= link_to "New Post",  new_post_path
+    %li= link_to "Sign Out",  destroy_user_session_path, method: :delete
+
+
+- if notice
+ = notice
+- if alert
+ = alert
 
 .container
  =yield
