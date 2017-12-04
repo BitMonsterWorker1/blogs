@@ -1,7 +1,10 @@
 .content
+ %small= @post.user.email
  %h1= @post.title
  %p= @post.body
  %br
  %small= link_to "Back", root_path
- %small= link_to "Eidt", edit_post_path(@post)
- %small= link_to "Delete", @post, method:  :delete, data: {confirm: "Are you sure to delete this post?"}
+
+ - if current_user == @post.user
+  %small= link_to "Eidt", edit_post_path(@post)
+  %small= link_to "Delete", @post, method:  :delete, data: {confirm: "Are you sure to delete this post?"}

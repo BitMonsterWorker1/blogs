@@ -1,4 +1,7 @@
 %h1 Posts:
 - @posts.each do |post|
-  .post
+ .post
   %h1= link_to post.title, post
+  %small
+   Crated by:
+   = post.user.email
