@@ -8,3 +8,4 @@
  - if current_user == @post.user
   %small= link_to "Eidt", edit_post_path(@post)
   %small= link_to "Delete", @post, method:  :delete, data: {confirm: "Are you sure to delete this post?"}
+  %small= link_to "Comment", edit_post_path(@post)

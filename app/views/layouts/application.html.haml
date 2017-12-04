@@ -10,9 +10,12 @@
   .container
    .navbar-brand= link_to "Main", root_path
    %ul.nav.navbar-nav.navbar-right
-    %li= link_to "New Post",  new_post_path
-    %li= link_to "Sign Out",  destroy_user_session_path, method: :delete
-    %li= link_to "Sign in",  new_post_path
+   - if user_signed_in?
+    %li= link_to "NEW POST",  new_post_path
+    %li= link_to "SIGN OUT",  destroy_user_session_path, method: :delete
+   - else
+    %li= link_to "SIGN IN",  new_user_session_path
+    %li= link_to "SIGN UP",  new_user_registration_path
 
 - if notice
  = notice
